@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="App3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <SwapChainPanel x:ConnectionId='1' x:Name="swapChainPanel">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0">
+            <TextBlock x:ConnectionId='7' Text="No file loaded..." x:Name="tbTitle" FontSize="38" />
+            <TextBlock x:ConnectionId='8' Text="" Foreground="#111" x:Name="tbFileSize" FontSize="18" />
+            <TextBlock x:ConnectionId='9' Text="" Foreground="#111" x:Name="tbVertex" FontSize="18" />
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0">
+            <CheckBox x:ConnectionId='4'  x:Name="cbShowWireframe"                        IsChecked="False">Wireframe</CheckBox>
+            <CheckBox x:ConnectionId='5'  x:Name="cbShowLights"                        IsChecked="True">Lights</CheckBox>
+            <CheckBox x:ConnectionId='6'  x:Name="cbShowGrid"                      IsChecked="True">Grid</CheckBox>
+        </StackPanel>
+
+        <Button x:ConnectionId='2' HorizontalAlignment="Left" VerticalAlignment="Center"                             >
+            <SymbolIcon Symbol="DockLeft"/>
+        </Button>
+
+        <Button x:ConnectionId='3' HorizontalAlignment="Right" VerticalAlignment="Center"                             >
+            <SymbolIcon Symbol="DockRight"/>
+        </Button>
+
+        <!--<StackPanel Orientation="Horizontal">
+            <TextBox x:Name="posX"></TextBox>
+            <TextBox x:Name="posY"></TextBox>
+            <TextBox x:Name="rotY"></TextBox>
+            <TextBox x:Name="rotY"></TextBox>
+        </StackPanel>-->
+    </SwapChainPanel>
+
+    <Page.BottomAppBar>
+        <AppBar x:ConnectionId='10' x:Name="bottomAppBar" Padding="10,0,10,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton x:ConnectionId='11' AutomationProperties.Name="Load file"
+                      AutomationProperties.AutomationId="Load file"
+                                                   Icon="OpenFile"/>
+
+                <AppBarButton x:ConnectionId='12' AutomationProperties.Name="Load folder"
+                      AutomationProperties.AutomationId="Load folder"
+                                                     Icon="Folder"/>
+                
+                <AppBarButton x:ConnectionId='13' AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                                                    Icon="Favorite"/>
+
+                <AppBarButton x:ConnectionId='14' AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                                                    Icon="Favorite"/>
+
+
+                <AppBarButton x:ConnectionId='15' AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                                                    Icon="Favorite"/>
+
+                <AppBarButton x:ConnectionId='16' AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                                                    Icon="Favorite"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
+

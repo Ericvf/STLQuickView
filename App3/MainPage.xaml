@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="App3.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App3"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <SwapChainPanel x:Name="swapChainPanel">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,0,0,0">
+            <TextBlock Text="No file loaded..." x:Name="tbTitle" FontSize="38" />
+            <TextBlock Text="" Foreground="#111" x:Name="tbFileSize" FontSize="18" />
+            <TextBlock Text="" Foreground="#111" x:Name="tbVertex" FontSize="18" />
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,0,0">
+            <CheckBox  x:Name="cbShowWireframe" Click="CheckBox_Click" IsChecked="False">Wireframe</CheckBox>
+            <CheckBox  x:Name="cbShowLights" Click="cbLights_Click" IsChecked="True">Lights</CheckBox>
+            <CheckBox  x:Name="cbShowGrid" Click="cbGrid_Click" IsChecked="True">Grid</CheckBox>
+        </StackPanel>
+
+        <Button HorizontalAlignment="Left" VerticalAlignment="Center" Click="ItemPrevButton_Click">
+            <SymbolIcon Symbol="DockLeft"/>
+        </Button>
+
+        <Button HorizontalAlignment="Right" VerticalAlignment="Center" Click="ItemNextButton_Click">
+            <SymbolIcon Symbol="DockRight"/>
+        </Button>
+
+        <!--<StackPanel Orientation="Horizontal">
+            <TextBox x:Name="posX"></TextBox>
+            <TextBox x:Name="posY"></TextBox>
+            <TextBox x:Name="rotY"></TextBox>
+            <TextBox x:Name="rotY"></TextBox>
+        </StackPanel>-->
+    </SwapChainPanel>
+
+    <Page.BottomAppBar>
+        <AppBar x:Name="bottomAppBar" Padding="10,0,10,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <AppBarButton AutomationProperties.Name="Load file"
+                      AutomationProperties.AutomationId="Load file"
+                      Click="LoadFileButton_Click" Icon="OpenFile"/>
+
+                <AppBarButton AutomationProperties.Name="Load folder"
+                      AutomationProperties.AutomationId="Load folder"
+                      Click="LoadFolderButton_Click" Icon="Folder"/>
+                
+                <AppBarButton AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                      Click="AppBarButton_Click_1"  Icon="Favorite"/>
+
+                <AppBarButton AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                      Click="AppBarButton_Click_2"  Icon="Favorite"/>
+
+
+                <AppBarButton AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                      Click="AppBarButton_Click_3"  Icon="Favorite"/>
+
+                <AppBarButton AutomationProperties.Name="Sample Button"
+                      AutomationProperties.AutomationId="SampleAppBarButton"
+                      Click="AppBarButton_Click_3"  Icon="Favorite"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>
